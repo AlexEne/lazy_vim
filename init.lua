@@ -17,6 +17,8 @@ vim.api.nvim_create_autocmd('VimEnter', {
     
     -- Press Space+Space to open the smart file picker
     vim.keymap.set('n', '<leader><space>', function() Snacks.picker.smart() end)
+    vim.keymap.set('n', '<C-p>', function() Snacks.picker.smart() end)
+    vim.keymap.set('n', '<D-p>', function() Snacks.picker.smart() end)
 
     -- Press Space+/ to open the grep picker
     vim.keymap.set('n', '<leader>/', function() Snacks.picker.grep() end)
