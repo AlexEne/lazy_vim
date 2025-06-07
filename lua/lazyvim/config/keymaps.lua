@@ -219,3 +219,14 @@ if vim.fn.has("nvim-0.11") == 0 then
     return vim.snippet.active({ direction = -1 }) and "<cmd>lua vim.snippet.jump(-1)<cr>" or "<S-Tab>"
   end, { expr = true, desc = "Jump Previous" })
 end
+
+-- Map Ctrl+<number> to go to window <number>
+for i = 1, 9 do
+  map("n", "<C-" .. i .. ">", function()
+    vim.cmd(i+1 .. "wincmd w")
+  end, { desc = "Go to window " .. i+1 })
+end
+
+-- Remap Cmd-/ (⌘/) to toggle comments in normal, visual, and insert modes
+map({ "n", "v" }, "<D-/>", "gcc", { remap = true, desc = "Toggle Comment (Cmd-/)" })
+map("i", "<D-/>", "<Esc>gccA", { remap = true, desc = "Toggle Comment (Cmd-/) in insert mode" })
