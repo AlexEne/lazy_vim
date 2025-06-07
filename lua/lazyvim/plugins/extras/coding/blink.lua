@@ -86,7 +86,7 @@ return {
       },
 
       keymap = {
-        preset = "enter",
+        preset = "super-tab",
         ["<C-y>"] = { "select_and_accept" },
       },
     },
