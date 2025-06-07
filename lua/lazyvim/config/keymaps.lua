@@ -227,10 +227,6 @@ for i = 1, 9 do
   end, { desc = "Go to window " .. i+1 })
 end
 
--- Remap Cmd-/ (⌘/) to toggle comments in normal, visual, and insert modes
-map({ "n", "v" }, "<D-/>", "gcc", { remap = true, desc = "Toggle Comment (Cmd-/)" })
-map("i", "<D-/>", "<Esc>gccA", { remap = true, desc = "Toggle Comment (Cmd-/) in insert mode" })
-
 -- In normal mode: Shift+Up/Down enters visual-line mode and selects lines
 map("n", "<S-Up>", "V<Up>", { desc = "Visual Line Up" })
 map("n", "<S-Down>", "V<Down>", { desc = "Visual Line Down" })
