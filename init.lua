@@ -9,6 +9,11 @@ vim.api.nvim_create_autocmd('VimEnter', {
     vim.keymap.set('i', '<D-z>', '<Esc>ua', { desc = 'Undo in insert mode' })
     -- vim.keymap.set('v', '<D-c>', '"+y', { desc = 'Copy in visual mode', silent = true })
     vim.keymap.set('n', '<D-z>', 'u', { desc = 'Undo in normal mode' })
+    
+     vim.keymap.set('i', '<D-Z>', '<Esc>Ua', { desc = 'Redo in insert mode' })
+    -- vim.keymap.set('v', '<D-c>', '"+y', { desc = 'Copy in visual mode', silent = true })
+    vim.keymap.set('n', '<D-Z>', 'U', { desc = 'Redo in normal mode' })
+    
     vim.keymap.set('n', '<D-v>', '"+p', { desc = 'Paste in normal mode' })
     vim.keymap.set('v', '<D-v>', '"+p', { desc = 'Paste in visual mode' })
     vim.keymap.set('i', '<D-v>', '<C-r>+', { desc = 'Paste in insert mode' })
